@@ -12,8 +12,7 @@ import java.util.Optional;
 import java.util.regex.Pattern;
 
 public class ParseParagraph extends ParserLinked<Leaf> {
-    private static final Pattern SENTENCE_DEL = Pattern.compile("[.!?]\r?");
-    private static final Pattern SENTENCE_END = Pattern.compile("[.!?]");
+    private static final Pattern SENTENCE_DEL = Pattern.compile("[.]\r?");
     private Logger logger = LogManager.getLogger(ParseText.class);
 
 
