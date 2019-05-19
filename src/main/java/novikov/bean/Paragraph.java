@@ -26,10 +26,12 @@ public class Paragraph implements CompositeLeaf {
 
     @Override
     public void printValues() {
+
         for (Leaf sentence : sentences) {
             sentence.printValues();
-            System.out.println(".");
+            System.out.print(".");
         }
+        System.out.print("\n");
     }
 
 }

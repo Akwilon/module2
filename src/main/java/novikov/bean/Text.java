@@ -27,9 +27,8 @@ public class Text implements CompositeLeaf {
     @Override
     public void printValues() {
         for (Leaf pars : par) {
-            System.out.println("\t");
+            System.out.print("\t");
             pars.printValues();
-            System.out.println("\n");
         }
     }
 
