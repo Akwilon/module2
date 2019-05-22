@@ -8,5 +8,5 @@ more-or-less normal distribution of letters, as opposed to using 'Content here, 
 here', making it look like readable English.
     It is a established fact that a reader will be of a page when looking at its
 layout.
-    Can this parser parse words like can't or won't? We will find out!
+    Can this parser parse words like can't or won't. We will find out.
     Bye.
