@@ -24,9 +24,8 @@ public class TextServiceTest {
         TextService service = new TextService();
         Text textSorted = controller.parseTextFromFile(path);
         for (Leaf leaf : textSorted.getLeafs()) {
-            service.sortParagtaph((Paragraph)leaf);
+            service.sortParagtaph((Paragraph)leaf).printValues();
         }
-        textSorted.printValues();
     }
 
 }

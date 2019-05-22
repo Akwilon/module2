@@ -10,13 +10,14 @@ import java.util.stream.Collectors;
 public class TextService implements Service {
 
     @Override
-    public void sortParagtaph(Paragraph text) {
+    public Paragraph sortParagtaph(Paragraph text) {
 
         List<Leaf> sortedLeaf = text.getLeafs().stream()
                                 .map(sentence -> (Sentence) sentence)
                                 .sorted(Comparator.comparingInt(sentence -> sentence.getLeafs().size() ))
                                 .collect(Collectors.toList());
-        text.setSentences(sortedLeaf);
+        Collections.reverse(sortedLeaf);
+        return new Paragraph(sortedLeaf);
 
     }
 
