@@ -19,6 +19,15 @@ public class Sentence implements CompositeLeaf {
         this.words.add(leaf);
     }
 
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Sentence{");
+        sb.append("words=").append(words);
+        sb.append('}');
+        return sb.toString();
+    }
+
     @Override
     public List<Leaf> getLeafs() {
         return words;

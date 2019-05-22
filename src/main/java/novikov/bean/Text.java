@@ -20,6 +20,14 @@ public class Text implements CompositeLeaf {
     }
 
     @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Text{");
+        sb.append("par=").append(par);
+        sb.append('}');
+        return sb.toString();
+    }
+
+    @Override
     public List<Leaf> getLeafs() {
         return par;
     }

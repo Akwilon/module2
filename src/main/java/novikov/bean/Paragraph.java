@@ -24,6 +24,18 @@ public class Paragraph implements CompositeLeaf {
         return sentences;
     }
 
+    public void setSentences(List<Leaf> sentences) {
+        this.sentences = sentences;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Paragraph{");
+        sb.append("sentences=").append(sentences);
+        sb.append('}');
+        return sb.toString();
+    }
+
     @Override
     public void printValues() {
 
