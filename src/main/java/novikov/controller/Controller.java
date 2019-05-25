@@ -14,7 +14,18 @@ import java.nio.file.Paths;
 
 public class Controller {
 
+    private static Controller instanse;
     private Logger logger = LogManager.getLogger(Controller.class);
+
+    private Controller() {
+    }
+
+    public static Controller getController() {
+        if (instanse == null) {
+            instanse = new Controller();
+        }
+        return instanse;
+    }
 
     public Text parseTextFromFile(String path) throws ParserException {
         if (path == null || path.isEmpty()) {
@@ -27,7 +38,7 @@ public class Controller {
             byte[] bytesString = Files.readAllBytes(paths);
             parsedString = new String(bytesString);
         } catch (IOException e) {
-            logger.error("Path parser exception : " + path + " With stackTrace: " + e );
+            logger.error("Path parser exception : " + path + " With stackTrace: " + e);
             throw new ParserException("Path parser exception", e);
         }
         ParseText parseText = ParseCreator.createTextToWordParse();

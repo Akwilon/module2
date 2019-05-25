@@ -10,7 +10,7 @@ public class ControllerTest {
     @Test
     public void testTextController() throws ParserException {
         String path = "src/main/resources/text.txt";
-        Controller controller = new Controller();
+        Controller controller = Controller.getController();
         Text text = controller.parseTextFromFile(path);
         text.printValues();
 
